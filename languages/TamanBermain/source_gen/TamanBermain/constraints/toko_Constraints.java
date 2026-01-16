@@ -22,7 +22,7 @@ public class toko_Constraints extends BaseConstraintsDescriptor {
 
   /*package*/ static final class Kapasitas_PD extends BasePropertyConstraintsDescriptor {
     public Kapasitas_PD(ConstraintsDescriptor container) {
-      super(PROPS.kapasitas$GoP_, container, false, false, true);
+      super(PROPS.kapasitas$drZ4, container, false, false, true);
     }
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
@@ -42,6 +42,6 @@ public class toko_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty kapasitas$GoP_ = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce68bL, 0x755d40d61b7ce690L, "kapasitas");
+    /*package*/ static final SProperty kapasitas$drZ4 = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L, 0x755d40d61b7b51e6L, "kapasitas");
   }
 }

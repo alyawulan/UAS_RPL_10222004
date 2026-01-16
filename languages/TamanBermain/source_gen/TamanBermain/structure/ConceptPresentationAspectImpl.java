@@ -38,28 +38,28 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.restoran:
         if (props_restoran == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("restoran");
+          cpb.presentationByName();
           props_restoran = cpb.create();
         }
         return props_restoran;
       case LanguageConceptSwitch.toko:
         if (props_toko == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("toko");
+          cpb.presentationByName();
           props_toko = cpb.create();
         }
         return props_toko;
       case LanguageConceptSwitch.venue:
         if (props_venue == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("venue");
+          cpb.presentationByName();
           props_venue = cpb.create();
         }
         return props_venue;
       case LanguageConceptSwitch.wahana:
         if (props_wahana == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("wahana");
+          cpb.presentationByName();
           props_wahana = cpb.create();
         }
         return props_wahana;

@@ -4,18 +4,12 @@ package TamanBermain.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsDescriptorInitContext;
-import jetbrains.mps.smodel.runtime.ConstraintFunction;
-import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeAncestor;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.SNodePointer;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
@@ -24,23 +18,11 @@ public class restoran_Constraints extends BaseConstraintsDescriptor {
   /*package*/ restoran_Constraints(ConstraintsDescriptorInitContext initContext) {
     super(CONCEPTS.restoran$qB, initContext);
     record(new Kapasitas_PD(this));
-    setCanBeAncestor(new ConstraintFunction<ConstraintContext_CanBeAncestor, Boolean>() {
-      @NotNull
-      public Boolean invoke(@NotNull ConstraintContext_CanBeAncestor context, @Nullable CheckingNodeContext checkingNodeContext) {
-        boolean result = staticCanBeAnAncestor(context.getNode(), context.getChildNode(), context.getChildConcept(), context.getParentNode(), context.getLink());
-
-        if (!(result) && checkingNodeContext != null) {
-          checkingNodeContext.setBreakingNode(canBeAncestorBreakingPoint);
-        }
-
-        return result;
-      }
-    });
   }
 
   /*package*/ static final class Kapasitas_PD extends BasePropertyConstraintsDescriptor {
     public Kapasitas_PD(ConstraintsDescriptor container) {
-      super(PROPS.kapasitas$GgRy, container, false, false, true);
+      super(PROPS.kapasitas$drZ4, container, false, false, true);
     }
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
@@ -54,16 +36,12 @@ public class restoran_Constraints extends BaseConstraintsDescriptor {
       return propertyValue >= 10 && propertyValue <= 50;
     }
   }
-  private static boolean staticCanBeAnAncestor(SNode node, SNode childNode, SAbstractConcept childConcept, SNode parentNode, SContainmentLink link) {
-    return SPropertyOperations.getInteger(node, PROPS.kapasitas$GgRy) >= 10 && SPropertyOperations.getInteger(node, PROPS.kapasitas$GgRy) <= 50;
-  }
-  private static final SNodePointer canBeAncestorBreakingPoint = new SNodePointer("r:60d2446b-9fea-46aa-883b-998d392c2085(TamanBermain.constraints)", "8456986963600083319");
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept restoran$qB = MetaAdapterFactory.getConcept(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce682L, "TamanBermain.structure.restoran");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty kapasitas$GgRy = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce682L, 0x755d40d61b7ce684L, "kapasitas");
+    /*package*/ static final SProperty kapasitas$drZ4 = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L, 0x755d40d61b7b51e6L, "kapasitas");
   }
 }

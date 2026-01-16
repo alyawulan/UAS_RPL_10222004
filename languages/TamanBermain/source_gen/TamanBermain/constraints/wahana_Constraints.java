@@ -23,7 +23,7 @@ public class wahana_Constraints extends BaseConstraintsDescriptor {
 
   /*package*/ static final class Durasi_PD extends BasePropertyConstraintsDescriptor {
     public Durasi_PD(ConstraintsDescriptor container) {
-      super(PROPS.durasi$GftV, container, false, false, true);
+      super(PROPS.durasi$2cF5, container, false, false, true);
     }
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
@@ -40,7 +40,7 @@ public class wahana_Constraints extends BaseConstraintsDescriptor {
   }
   /*package*/ static final class Kapasitas_PD extends BasePropertyConstraintsDescriptor {
     public Kapasitas_PD(ConstraintsDescriptor container) {
-      super(PROPS.kapasitas$Ga4$, container, false, false, true);
+      super(PROPS.kapasitas$drZ4, container, false, false, true);
     }
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
@@ -60,7 +60,7 @@ public class wahana_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty durasi$GftV = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce679L, 0x755d40d61b7ce67fL, "durasi");
-    /*package*/ static final SProperty kapasitas$Ga4$ = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce679L, 0x755d40d61b7ce67dL, "kapasitas");
+    /*package*/ static final SProperty durasi$2cF5 = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce679L, 0x755d40d61b8580d0L, "durasi");
+    /*package*/ static final SProperty kapasitas$drZ4 = MetaAdapterFactory.getProperty(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L, 0x755d40d61b7b51e6L, "kapasitas");
   }
 }

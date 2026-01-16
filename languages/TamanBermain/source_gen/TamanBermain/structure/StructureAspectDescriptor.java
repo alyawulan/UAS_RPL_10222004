@@ -67,11 +67,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963599905240");
     b.version(3);
-    b.property("nama", 0x755d40d61b7b51daL).type(PrimitiveTypeId.STRING).origin("8456986963599905242").done();
     b.property("luas", 0x755d40d61b7b51ddL).type(PrimitiveTypeId.INTEGER).origin("8456986963599905245").done();
+    b.property("nama", 0x755d40d61b8580ddL).type(PrimitiveTypeId.STRING).origin("8456986963600572637").done();
     b.aggregate("venues", 0x755d40d61b7b51dfL).target(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L).optional(true).ordered(true).multiple(true).origin("8456986963599905247").done();
-    b.aggregate("makanans", 0x755d40d61b7ce693L).target(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce682L).optional(true).ordered(true).multiple(true).origin("8456986963600008851").done();
-    b.aggregate("belanjas", 0x755d40d61b7ce697L).target(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce68bL).optional(true).ordered(true).multiple(true).origin("8456986963600008855").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTamanBermain() {
@@ -79,46 +77,45 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963599905231");
     b.version(3);
-    b.property("nama", 0x755d40d61b7b51d2L).type(PrimitiveTypeId.STRING).origin("8456986963599905234").done();
+    b.property("nama", 0x755d40d61b8580adL).type(PrimitiveTypeId.STRING).origin("8456986963600572589").done();
     b.aggregate("areas", 0x755d40d61b7b51d4L).target(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51d8L).optional(true).ordered(true).multiple(true).origin("8456986963599905236").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForrestoran() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TamanBermain", "restoran", 0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce682L);
     b.class_(false, false, false);
+    // extends: TamanBermain.structure.venue
+    b.super_(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963600008834");
     b.version(3);
-    b.property("kapasitas", 0x755d40d61b7ce684L).type(PrimitiveTypeId.INTEGER).origin("8456986963600008836").done();
-    b.property("nama", 0x755d40d61b7ce6bfL).type(PrimitiveTypeId.STRING).origin("8456986963600008895").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorFortoko() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TamanBermain", "toko", 0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce68bL);
     b.class_(false, false, false);
+    // extends: TamanBermain.structure.venue
+    b.super_(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963600008843");
     b.version(3);
-    b.property("kapasitas", 0x755d40d61b7ce690L).type(PrimitiveTypeId.INTEGER).origin("8456986963600008848").done();
-    b.property("nama", 0x755d40d61b7ce6c2L).type(PrimitiveTypeId.STRING).origin("8456986963600008898").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForvenue() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TamanBermain", "venue", 0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L);
     b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963599905250");
     b.version(3);
-    b.property("nama", 0x755d40d61b7b51e4L).type(PrimitiveTypeId.STRING).origin("8456986963599905252").done();
     b.property("kapasitas", 0x755d40d61b7b51e6L).type(PrimitiveTypeId.INTEGER).origin("8456986963599905254").done();
-    b.property("durasi", 0x755d40d61b7b51e7L).type(PrimitiveTypeId.INTEGER).origin("8456986963599905255").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForwahana() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TamanBermain", "wahana", 0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7ce679L);
     b.class_(false, false, false);
+    // extends: TamanBermain.structure.venue
+    b.super_(0x5194acc1bbd04011L, 0x97f4d074d6446485L, 0x755d40d61b7b51e2L);
     b.origin("r:bb0752e7-427e-4a1a-bdf9-8c1609a0e02b(TamanBermain.structure)/8456986963600008825");
     b.version(3);
-    b.property("kapasitas", 0x755d40d61b7ce67dL).type(PrimitiveTypeId.INTEGER).origin("8456986963600008829").done();
-    b.property("durasi", 0x755d40d61b7ce67fL).type(PrimitiveTypeId.INTEGER).origin("8456986963600008831").done();
-    b.property("nama", 0x755d40d61b7d6686L).type(PrimitiveTypeId.STRING).origin("8456986963600041606").done();
+    b.property("durasi", 0x755d40d61b8580d0L).type(PrimitiveTypeId.INTEGER).origin("8456986963600572624").done();
     return b.create();
   }
 }
